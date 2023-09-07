@@ -7,6 +7,7 @@ body {
     font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 hr {
     border: 4px solid;
@@ -16,7 +17,7 @@ hr {
 /*----------Header Section----------*/
 
 .header {
-    height: 80vh;
+    height: auto;
     background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5),  rgba(0,0,0,0.9)), url(assets/header-bakground.jpg);
     background-size: cover;
     background-position: center;
@@ -29,6 +30,9 @@ nav {
 }
 .logo {
     width: 120px;
+    overflow: hidden;
+    color: rgb(255, 0, 0);
+    fill: currentColor;
 }
 nav select {
     background-color: rgba(0,0,0,0.2);
@@ -55,12 +59,11 @@ nav button {
 .header-content {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    margin: 0 auto;
+    margin: auto;
     padding: 2rem;
 }
 .header-content h1 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 700;
     text-align: center;
 }
@@ -69,8 +72,13 @@ nav button {
     font-weight: 400;
     text-align: center;
     margin: 10px;
+    padding-bottom: 0.5rem;
 }
-.header-content input {
+.content-form {
+    display: flex;
+    flex-direction: column;
+}
+.content-form input {
     width: 85%;
     margin: 0 auto;
     height: 3rem;
@@ -82,7 +90,7 @@ nav button {
     font-size: 16px;
     font-weight: 300;
 }
-.header-content button {
+.content-form button {
     margin: 1em auto;
     background-color: rgb(255,0,0);
     border: 1px solid;
@@ -130,6 +138,10 @@ nav button {
     padding: 3rem 0;
     padding-bottom: 1.5rem;
 }
+.dropdownWrapper {
+    display: flex;
+    flex-direction: column;
+}
 .collapsible {
     background-color: rgb(60, 60, 60);
     color: rgb(255, 255, 255);
@@ -141,45 +153,31 @@ nav button {
     text-align: left;
     outline: none;
     font-size: 18px;
-    margin: 4px auto;
+    margin: 2px auto;
 }
 .collapsible:hover {
     background-color: rgba(80, 80, 80);
 }
-.content {
-    margin: 0 1.7rem;
+.dropdownWrapper p {
     padding: 1rem 2rem;
-    display: none;
+}
+.content {
+    width: 85%;
+    max-height: 0;
+    margin: 0 auto;
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 18px;
     background-color: rgb(60, 60, 60);
+    transition: max-height 0.4s
 }
 .reminder {
     font-size: 18px;
     text-align: center;
     padding: 2rem 3.5rem;
 }
-.reminder input {
-    width: 85%;
-    margin: 1rem auto;
-    height: 3rem;
-    background-color: rgba(0,0,0,0.2);
-    color: rgb(255, 255, 255);
-    padding-left: 15px;
-    border: 1px solid rgba(255,255,255,.4);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 300;
-}
-.reminder button {
-    background-color: rgb(255,0,0);
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    border: none;
-    width: 9rem;
-    height: 50px;
-    border-radius: 5px;
+.reminder p {
+    margin-bottom: 1rem;
 }
 
 /*----------Footer Section----------*/
@@ -190,7 +188,10 @@ nav button {
     font-size: 16px;
     padding-left: 1.5rem;
 }
-.footer a {
+.footer li {
+    list-style-type: none;
+}
+.footer li {
     padding: 5px 0;
     color: rgb(200, 200, 200);
 }
@@ -218,4 +219,55 @@ nav button {
 .footer p {
     font-size: 14px;
     color: rgb(190, 190, 190);
+    padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .header-content {
+        margin: 3rem 0;
+    }
+    .content-form {
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 100%;
+    }
+    .content-form input {
+        width:60%;
+        height: 3.5rem;
+        margin-right: 0.5rem;
+    }
+    .content-form button {
+        margin: 0;
+        width: 40%;
+        height: 3.5rem;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .footer ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (min-width: 610px) {
+    .footer ul {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    nav {
+        margin: 0 auto;
+        padding: 1.50rem 11rem;
+    }
+    nav .logo {
+        width: 9.25rem;
+    }
+    .header {
+        height: 95vh;
+    }
+    .header-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
 }
