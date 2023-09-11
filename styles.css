@@ -7,7 +7,6 @@ body {
     font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-    overflow: hidden;
 }
 hr {
     border: 4px solid;
@@ -16,13 +15,13 @@ hr {
 
 /*----------Header Section----------*/
 
-.header {
-    height: auto;
+header {
+    height: 80vh;
     background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5),  rgba(0,0,0,0.9)), url(assets/header-bakground.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
-}  
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -59,7 +58,7 @@ nav button {
 .header-content {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0 auto;
     padding: 2rem;
 }
 .header-content h1 {
@@ -222,7 +221,7 @@ nav button {
     padding-bottom: 2rem;
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     .header-content {
         margin: 3rem 0;
     }
@@ -269,5 +268,120 @@ nav button {
     .header-content h1 {
         font-size: 3rem;
         font-weight: 700;
+    }
+} */
+
+/* Desktop View */
+
+@media only screen and (min-width: 1280px) {
+    header {
+        height: 95vh;
+    }
+    nav {
+        padding: 1.5rem 11rem
+    }
+    .logo {
+        width: 150px;
+    }
+    nav select {
+        padding-left: 2rem;
+        width: 8rem;
+        font-size: 1rem;
+    }
+    nav button {
+        width: 5rem;
+        margin-left: 2rem;
+        font-size: 1rem;
+    }
+    .header-content {
+        margin: auto;
+        margin-top: 4rem;
+        padding: 4rem 11rem;
+    }
+    .header-content h1 {
+        font-size: 48px;
+    }
+    .header-content p {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .content-form {
+        flex-direction: row;
+        margin-left: 18rem;
+        margin-right: 18rem;
+    }
+    .content-form input {
+        width:60%;
+        height: 3.5rem;
+        margin-right: 0.5rem;
+    }
+    .content-form button {
+        margin: 0;
+        width: 40%;
+        height: 3.5rem;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+ 
+    .features {
+        padding: 3rem 11rem;
+    }
+    .row-1, .row-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .row-2, .row-4 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }    
+    .features h1 {
+        font-size: 48px;
+        text-align: left;
+    }
+    .features p {
+        font-size: 20px;
+        text-align: left;
+    }
+
+
+
+    .faqs {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .faqs h1 {
+        font-size: 3rem;
+    }
+    .collapsible {
+        width: 75%;
+        height: 4.5em;
+        font-size: 20px;
+        margin: 4px auto;
+    }
+    .content {
+        width: 75%;
+        font-size: 20px;
+    }
+    .reminder p {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+    
+    .footer {
+        font-size: 16px;
+        margin: 2rem 0;
+        padding-left: 11rem;
+        padding-right: 11rem;
+    }
+    .footer ul {
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
 }
