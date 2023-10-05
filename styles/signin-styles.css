@@ -9,7 +9,6 @@ body {
     font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(0,0,0);
-    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url(../assets/signin-background.jpg); */
     position: relative;
 }
 nav {
@@ -26,7 +25,9 @@ nav {
 .form-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height: 70vh;
+    margin-bottom: auto;
 }
 
 .signin-form {
@@ -90,7 +91,120 @@ nav {
     color: rgb(180, 180, 180);
 }
 
+.checkbox:checked {
+    accent-color: grey;
+}
+
 .need-help {
     text-decoration: none;
     color: rgb(180, 180, 180);
+}
+
+.footer-text {
+    color: rgb(160, 160, 160);
+}
+
+.signup-now {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.signup-now:hover {
+    text-decoration: underline;
+}
+
+.footer-text-1 {
+    font-size: 14px;
+}
+
+.learn-more {
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+
+.footer-header {
+    padding: 2em 1em;
+}
+
+.footer-header a {
+    text-decoration: none;
+    color: rgb(150, 150, 150);
+}
+
+.footer-header a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 1em;
+    padding-bottom: 2em;
+    list-style-type: none;
+}
+
+.footer-links a {
+    color: rgb(150, 150, 150);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links li {
+    padding-bottom: 10px;
+}
+
+.footer-lang-select {
+    margin: 1em;
+    margin-bottom: 4em;
+    padding: 1em;
+    background-color: rgba(0,0,0, 0.5);
+    color: rgb(150, 150, 150);
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+@media only screen and (min-width: 740px) {
+    body {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6),  rgba(0,0,0,0.6)), url(../assets/signin-background.jpg);
+    }
+    nav {
+        padding-top: 2em;
+        padding-left: 4em;
+        padding-bottom: 2em;
+    }
+    .logo {
+        width: 180px;
+    }
+    .form-wrapper {
+        height: 100%;
+        align-items: start;
+    }
+    .signin-form {
+        width: 20%;
+        height: 70%;
+        padding: 4em;
+        background-color: rgba(0,0,0, 0.7);
+    }
+    .footer-text {
+        padding-top: 2em;
+    }
+    footer {
+        background-color: rgba(0,0,0, 0.8);
+        padding: 0 16em;
+    }
+    .footer-links {
+        grid-template-columns: auto auto auto auto;
+    }
+    hr {
+        display: none;
+    }
 }
