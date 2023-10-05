@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,0,0);
+    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url(../assets/signin-background.jpg); */
+    position: relative;
+}
+nav {
+    padding: 1em;
+}
+
+.logo {
+    width: 80px;
+    overflow: hidden;
+    color: rgb(255, 0, 0);
+    fill: currentColor;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0,0,0);
+    width: 100%;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text {
+    padding-bottom: 2rem;
+}
+
+.email-input {
+    background-color: rgb(60, 60, 60);
+    color: rgb(174, 174, 174);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    height: 4em;
+    padding: 0 2em;
+    margin-bottom: 1rem;
+}
+
+.password-input {
+    background-color: rgb(60, 60, 60);
+    color: rgb(174, 174, 174);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    height: 4em;
+    padding: 0 2em;
+    margin-bottom: 1rem;
+}
+
+.form-submit {
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 3em;
+    margin-top: 1.5rem;
+}
+
+.remember-me-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    font-size: 13px;
+    color: rgb(180, 180, 180);
+}
+
+.need-help {
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+}
